@@ -1,0 +1,63 @@
+body {
+  margin: 0 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+  border-radius: 10px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  width: 300px;
+}
+
+.images {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.bildet {
+  justify-content: center;
+  margin: 50px;
+}
+
+.informasjon {
+  text-align: center;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bildet {
+    margin: 20px 0px;
+  }
+}
+
+/*For tablets*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .images {
+    grid-template-columns: auto;
+    text-align: center ;
+  }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../eksamen.css/Accessebility.css" />
+    <link rel="stylesheet" href="../eksamen.css/Footer.css" />
+    <link rel="stylesheet" href="../eksamen.css/Header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Accessibility</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <p>Mike's Corner</p>
+        </div>
+
+        <div class="menu">
+          <a href="Home.html" alt="Home" aria-label="Home"> Home</a>
+          <a href="Booking.html" aria-label="Booking" alt="Booking">Booking</a>
+          <a href="Menu.html" aria-label="menu" alt="menu">Menu</a>
+          <a
+            href="Accessibility.html"
+            aria-label="Accessibility"
+            alt="Accessibility"
+            >Accessibility</a
+          >
+          <a href="Topical.html" alt="Topical" aria-label="Topical">Topical</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="informasjon" role="region" aria-label="Accessibilit">
+      <h1>Accessibility</h1>
+      <hr />
+      <p>
+        Vi har sjekket vår tilgjengelighet(accessibility) på nettsiden
+        automatisk ved å bruke chrome extension:
+        <a
+          href="//chrome.google.com/webstore/detail/siteimprove-accessibility/djcglbmbegflehmbfleechkjhmedcopn?hl=en"
+          >siteimprove-accessibility</a
+        >
+      </p>
+
+      <p>
+        Denne extension hjelper med å fortelle om nettsiden er riktig utviklet
+        for personer med vanskeligheter, f.eks.: Dårlig syn, fargeblinde osv.
+        Her er skjermbilder av hvilken feil som ble funnet og hvordan de ble
+        løst:
+      </p>
+    </div>
+
+    <div class="images">
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for ARIAlandmark"
+      >
+        <img
+          src="../Images/accessibilityBilder/ARIAlandmark.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Problemet her er at jeg ikke hadde role og aria label i mine div
+          bokser. Dette problemet kommer opp fordi folk som trenger assistanse
+          kan ha vanskligheter med å bruke nettsiden. Jeg løste dette problemet
+          ved å sette inn "role=region" og en aria-label
+        </p>
+      </div>
+
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for Alt og aria label"
+      >
+        <img
+          src="../Images/accessibilityBilder/alt_aria_label.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Linkene hadde ikke alt eller aria-label. Dette kan bli et problem for
+          folk som er blinde eller folk som har veldig dårlig syn. Vi fikset
+          dette problemet ved å sette inn aria-label og alt inn i linkene
+        </p>
+      </div>
+
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for img"
+      >
+        <img
+          src="../Images/accessibilityBilder/img.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Det samme problemet fikk vi bare for bildene. Bildene hadde ikke alt
+          eller aria-label. Alt og aria-label blir brukt for å beskrive bildene
+          når man ikke kan se de. Løste dette problemet ved å sette inn
+          aria-label og alt inn i img taggene.
+        </p>
+      </div>
+
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for iframe"
+      >
+        <img
+          src="../Images/accessibilityBilder/iframe.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Hadde det samme problemet for vår iframe. Kartet på vår footer hadde
+          ingen alt eller aria-label så vi satte det inn.
+        </p>
+      </div>
+
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for lineheight"
+      >
+        <img
+          src="../Images/accessibilityBilder/lineheight.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Vår lineheight var mindre enn 1.5 og dette kan være vanklig å lese for
+          noen som har svak syn. Så for å løse dette så satte vi inn lineheight
+          1.5 for alle p taggene. Dette samme problemet kom også opp på vår
+          booking side.
+        </p>
+      </div>
+
+      <div
+        class="bildet"
+        role="region"
+        aria-label="problem beskrivelse for fontsize"
+      >
+        <img
+          src="../Images/accessibilityBilder/fontsize.png"
+          alt="bildet av accessibility checker"
+        />
+        <p>
+          Vi hadde 25px på vår fontsize. Problemet med dette er at brukere med
+          dårlig syn vil kanskje endre på størrelsen for å se bedre, men px
+          overstyrer dette. Derfor løste vi dette problemet ved å bytta fra 25px
+          til 1.5em
+        </p>
+      </div>
+    </div>
+
+    <div class="informasjon" role="region" aria-label="Universal Design">
+      <h1>Universal Design</h1>
+      <hr />
+      <p>
+        Universell utforming handler om å gjøre nettsiden tilgjengelig for
+        mennesker uavhengig av deres alder og funksjonshemming. Vi har prøvd å
+        huske på at alle mennesker er forskjellig og oppfatter tekst og farger
+        forskjellig, og designet nettsiden med dette i bakhodet. Vi har f.eks:
+        ikke brukt sterke fargekontrast. Vi har passet på at nettsiden ikke
+        bruker sterke farger som gul og rød, samtidig som vi ikke bruker farger
+        for å kommunisere noe til brukeren. Vi har også tenkt at brukeren kan ha
+        forskjellig erfaring ved bruk av nettsider, og passet på at designet er
+        lett å forstå, uavhengig av brukerens erfaring, kunnskap,
+        språkferdigheter og konsentrasjonsnivå. Vi har f.eks. Ingen informasjon
+        som blir borte etter en viss tid. Vi vet ikke om brukere av våre
+        nettsteder , skal bruke mobil eller PC. Derfor har vi også sørget for at
+        nettsiden fungerer på forskjellige type enheter og størrelser.
+      </p>
+    </div>
+    <!--Snakke med zuheb om farger og fikse teksten sånn at den ikke går imot
+      nettsiden.-->
+    <footer>
+      <div class="footer">
+        <div>
+          <h2>Kontakt oss</h2>
+          <hr />
+          <div class="contact">
+            <a href="tel:+92202098"> Telefon: 92202098</a>
+            <a href="mailto:mike@mikescorner.com"> mike@mikescorner.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Feedback</h2>
+          <hr />
+          <div class="feedback">
+            <a href="https://www.tv2.no/arkiv/mikes%20corner"> NRK </a>
+            <a href="https://meravoslo.no/nyheter/mikes-corner">
+              Meravoslo.no
+            </a>
+            <a
+              href="https://mat.nettavisen.no/review/mikes-corner-populaer-street-food-i-oslo-sentrum/"
+            >
+              Nettavisen.no
+            </a>
+          </div>
+        </div>
+
+        <div class="social">
+          <h2>Sosialemedier</h2>
+          <hr />
+          <a
+            href="https://www.instagram.com/mikescorner/"
+            class="fa fa-instagram"
+            aria-label="Instagram"
+            alt="Instagram"
+          ></a>
+        </div>
+
+        <div class="location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8002.20086889829!2d10.759373!3d59.9064154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82b609880718e006!2zTWlrZeKAmXMgQ29ybmVy!5e0!3m2!1sno!2sno!4v1669052416063!5m2!1sno!2sno"
+            width="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            role="img"
+            alt="Bildet av kart"
+            aria-label="Bildet av kart"
+          ></iframe>
+          <address>Operagata 77d 0194</address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

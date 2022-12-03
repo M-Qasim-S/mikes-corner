@@ -1,0 +1,98 @@
+body {
+  margin: 0 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+  border-radius: 10px;
+}
+
+/*MAINCONTENT*/
+.heroimage {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 252, 0.6),
+      rgb(255, 255, 252, 0.1)
+    ),
+    url("../Images/train.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.heroimage p {
+  font-weight: 600;
+}
+
+.content,
+.sidebar,
+.articel {
+  color: black;
+  background-color: #f5f5f5;
+  padding: 30px;
+  word-break: keep-all;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: black;
+  opacity: 0.9;
+  font-weight: bolder;
+}
+
+/*maincontent-testimonial-grid*/
+.maincontent-testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "heroimage heroimage"
+    "articel articel"
+    "content1 content2"
+    "content3 content4";
+  margin: 25px 0;
+}
+
+.heroimage {
+  grid-area: heroimage;
+}
+
+.articel {
+  grid-area: articel;
+}
+
+.content1 {
+  grid-area: content1;
+}
+.content2 {
+  grid-area: content2;
+}
+
+.content3 {
+  grid-area: content3;
+}
+
+.content4 {
+  grid-area: content4;
+}
+
+p {
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .maincontent-testimonial-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  padding: 20px;
+  background: #f5f5f5;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  font-size: medium;
+  margin: 25px;
+  box-shadow: none;
+}
+
+a {
+  color: blue;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: black;
+  font-size: large;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,46 @@
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.feedback,
+.contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.feedback,
+.contact,
+.sosial,
+.company {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .social {
+    margin-bottom: 20px;
+  }
+}
+
+/*For tablets*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .location {
+    grid-column: 2;
+    margin-top: 20px;
+  }
+}
